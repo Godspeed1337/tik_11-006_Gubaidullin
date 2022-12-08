@@ -23,6 +23,7 @@ def decompress(compressed_data):
 
 if __name__ == '__main__':
     file_name = str(input('Введите имя файла: '))
+    # тут будут содержаться цифры
     comressed = []
     with open(file_name, 'rb') as f:
         while byte := f.read(1):
