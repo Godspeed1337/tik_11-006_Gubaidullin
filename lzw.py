@@ -31,3 +31,4 @@ if __name__ == '__main__':
             comressed.append(int_val)
 
     decompressed = decompress(comressed)
+    print(decompressed)
