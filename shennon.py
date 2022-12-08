@@ -61,7 +61,7 @@ class Shennon():
 
 
     def save_probs(self):
-        with open('probs.txt', 'w') as f:
+        with open('probs.txt', 'w', encoding="UTF-8") as f:
             for key in self.d.keys():
                 if key == '\n':
                     f.write('\\n' + ' ')
