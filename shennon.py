@@ -34,7 +34,6 @@ class Shennon():
                 else:
                     self.code[key] = self.code[key] + str(0)
             i += 1
-            self.code[key] = BitArray(bin=self.code[key])
 
     def calc_by_prob(self, prob_list):
         prob_list = sorted(prob_list, reverse=True)
@@ -57,8 +56,6 @@ class Shennon():
                 else:
                     self.code[key] = self.code[key] + str(0)
             i += 1
-            self.code[key] = BitArray(bin=self.code[key])
-
 
     def save_probs(self):
         with open('probs.txt', 'w', encoding="UTF-8") as f:
@@ -72,10 +69,10 @@ class Shennon():
                 f.write(str(value) + ' ')
 
     def save_encoded(self, string):
-        with open('encoded.bin', 'wb') as f:
+        with open('encoded.txt', 'w') as f:
             for i in string:
                 obj = self.code.get(i)
-                obj.tofile(f)
+                f.write(obj)
 
 
 

@@ -25,10 +25,11 @@ if __name__ == '__main__':
     file_name = str(input('Введите имя файла: '))
     # тут будут содержаться цифры
     comressed = []
-    with open(file_name, 'rb') as f:
-        while byte := f.read(1):
-            int_val = int.from_bytes(byte, "big")
-            comressed.append(int_val)
+    with open(file_name, 'r') as f:
+        while chars := f.read(8):
+            print(chars)
+            print(int(chars, 2))
+            comressed.append(int(chars, 2))
 
     decompressed = decompress(comressed)
     print(decompressed)
