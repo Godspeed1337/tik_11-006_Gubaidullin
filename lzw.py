@@ -4,8 +4,8 @@ def decompress(compressed_data):
     string = ""
 
     # Создание и инициализация словаря
-    dictionary_size = 256
-    dictionary = dict([(x, chr(x)) for x in range(dictionary_size)])
+    dictionary_size = 96
+    dictionary = dict([(x, chr(x + 32)) for x in range(dictionary_size)])
 
     # перебор кодов
     # Алгоритм LZW
